@@ -1,17 +1,67 @@
-# exames_so
+# +S Mais Saber
 
-A new Flutter project.
+Aplicativo Android de estudo para alunos moçambicanos, onde será possível consultar e descarregar exames anteriores, guias de estudo e livros, de várias disciplinas e classes.
 
-## Getting Started
+> 🚧 Em desenvolvimento. Por enquanto só existe a tela inicial.
 
-This project is a starting point for a Flutter application.
+## Sobre o projecto
 
-A few resources to get you started if this is your first Flutter project:
+Muitos alunos têm dificuldade em encontrar provas e materiais de estudo organizados num só lugar. O **Mais Saber** quer resolver isso: um app leve, simples e que funcione também **offline**, pensado para quem tem dados móveis limitados.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Funcionalidades
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*Já feito:*
+- [x] Tela inicial com cabeçalho, botões *Exames*, *Guia* e *Livros* e caixa de conteúdo
+
+**Planeadas**
+- [ ] Lista de exames com filtro por classe e disciplina
+- [ ] Pesquisa de exames
+- [ ] Download e leitura de PDFs dentro do app
+- [ ] Acesso offline aos ficheiros descarregados
+- [ ] Guia de estudo (técnicas, planeamento, dicas)
+- [ ] Biblioteca de livros por classe
+- [ ] Menu lateral e página de perfil
+- [ ] Servidor (backend) para actualizar o conteúdo sem reinstalar o app
+
+## Tecnologias
+
+- [Flutter](https://flutter.dev) e Dart (interface do app)
+- SQLite (`sqflite`), previsto para guardar os dados localmente
+- Python (FastAPI), previsto para o servidor
+
+## Como executar
+
+Pré-requisitos: [Flutter SDK](https://docs.flutter.dev/get-started/install) instalado e um emulador Android ou telemóvel com depuração USB.
+
+***bash
+git clone https://github.com/aderitoguilundo/exames_so.git
+cd exames_so
+flutter pub get
+flutter run
+```
+
+## Estrutura do projecto
+``
+exames_so/
+├── android/        # projecto Android
+├── ios/            # projecto iOS
+├── lib/
+│   └── main.dart   # código principal do app
+├── test/           # testes
+├── web/            # versão web
+├── pubspec.yaml    # dependências
+└── README.md
+```
+
+## Design
+
+O esboço inicial da interface foi desenhado à mão: cabeçalho com o nome do app e o menu, três botões (Exames, Guia, Livros) e uma área grande para o conteúdo. Cores: fundo branco, texto preto e "Mais Saber" em azul.
+
+## Autor
+
+**Adérito Guilundo**, Moçambique
+GitHub: [@aderitoguilundo](https://github.com/aderitoguilundo)
+
+## Licença
+
+Projecto pessoal. Licença ainda por definir.
